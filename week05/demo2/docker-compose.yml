@@ -1,0 +1,11 @@
+#docker-compose.yml
+version: '3'
+services:
+  web:
+    build: ./web
+    ports:
+      - "5001:5000"
+    volumes:
+      - ./web:/app
+  redis:
+    image: "redis:6.2.10-alpine"
